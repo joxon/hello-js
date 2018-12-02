@@ -11,7 +11,7 @@
 
 exports.run = async function () {
   var { data } = await axios.post('https://hdchina.org/plugin_sign-in.php?cmd=signin');
-  if (data.state == 'success') return '已签到' + data.signindays;
+  if (data.state == 'success') return '已签到' + data.signindays + '天';
   throw data.msg;
 };
 
