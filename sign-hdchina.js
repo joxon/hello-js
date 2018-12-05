@@ -9,13 +9,16 @@
 // @domain            hdchina.org
 // ==/UserScript==
 
-exports.run = async function () {
-  var { data } = await axios.post('https://hdchina.org/plugin_sign-in.php?cmd=signin');
-  if (data.state == 'success') return '已签到' + data.signindays + '天';
-  throw data.msg;
+exports.run = async function() {
+  var res = await axios.post('https://hdchina.org/plugin_sign-in.php?cmd=signin');
+  console.log(res);
+  if (res.data.state == 'success') return '已签到' + res.data.signindays + '天';
+  else if (res.data.state == 'false') throw '今日已签到';
+  else throw '未知错误';
 };
 
-exports.check = async function () {
-  var { data } = await axios.get('https://hdchina.org');
-  return data.code === 0;
+exports.check = async function() {
+  var res = await axios.get('https://hdchina.org/index.php');
+  //未登录会返回302，重定向到login.php
+  return res.status === 200;
 };

@@ -9,14 +9,21 @@
 // @domain            totheglory.im
 // ==/UserScript==
 
-exports.run = async function () {
-  var { data } = await axios.post('https://totheglory.im/signed.php');
+exports.run = async function() {
+  var res = await axios.post('https://totheglory.im/signed.php');
+  console.log(res);
+  // res.data
+  // "亲，不要投机取巧哦！"
+  // res payload
   // 您已连续签到26天，奖励35积分，明天继续签到将获得36积分奖励。
-  // if (data) return '已签到' + data.signindays;
-  // throw data.msg;
+  // form data
+  // signed_timestamp	1543990604
+  // signed_token	ae57fb9b69cfd83f6c6c8089b00e0f2f
+  if (res.data.includes('投机取巧')) throw '请求格式不正确';
 };
 
-exports.check = async function () {
-  var { data } = await axios.get('https://totheglory.im');
-  return data.code === 0;
+exports.check = async function() {
+  var res = await axios.get('https://totheglory.im/index.php');
+  //未登录会返回302，重定向到login.php
+  return res.status === 200;
 };
