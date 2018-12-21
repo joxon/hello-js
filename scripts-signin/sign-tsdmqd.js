@@ -9,11 +9,12 @@
 // @domain            www.tsdm.me
 // ==/UserScript==
 
-exports.run = async function() {
+exports.run = async function () {
   var res = await axios.post(
     'http://www.tsdm.me/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=1&sign_as=1&inajax=1',
     {
       // 4c856b34
+      // c593da12
       formhash: 'c593da12',
       // qdxq 签到心情
       // kx 开心 ng 难过 ym 郁闷 wl 无聊
@@ -33,7 +34,7 @@ exports.run = async function() {
   else throw '未知错误';
 };
 
-exports.check = async function() {
+exports.check = async function () {
   var res = await axios.get('http://www.tsdm.me/plugin.php?id=np_cliworkdz:work');
   if (res.data.includes('请先登录再进行点击任务')) return false;
   else return true;
