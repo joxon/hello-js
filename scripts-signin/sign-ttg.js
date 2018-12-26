@@ -9,6 +9,19 @@
 // @domain            totheglory.im
 // ==/UserScript==
 
+// 表单信息存放在html中，由服务器生成
+// function() {
+//   $.post("signed.php", {
+//     signed_timestamp: "1545842107",
+//     signed_token: "2b44caa6523b036bc52ee706ab0cf626"
+//   }, function (data) {
+//     $('#sp_signed').html("<b style=\"color:green;\">已签到</b>");
+//     alert(data);
+//   });
+// }
+
+// document.getElementById('signed').click()
+
 exports.run = async function () {
   var res = await axios.post('https://totheglory.im/signed.php');
   console.log(res);

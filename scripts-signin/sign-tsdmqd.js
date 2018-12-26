@@ -15,7 +15,8 @@ exports.run = async function () {
     {
       // 4c856b34
       // c593da12
-      formhash: 'c593da12',
+      // a37a248f
+      formhash: 'a37a248f',
       // qdxq 签到心情
       // kx 开心 ng 难过 ym 郁闷 wl 无聊
       // nu 怒 ch 擦汗 fd 奋斗 yl 慵懒 shuai 衰
@@ -30,6 +31,7 @@ exports.run = async function () {
   );
   console.log(res);
   if (res.data.includes('您当前的访问请求当中含有非法字符')) throw '请求格式错误';
+  else if (res.data.includes('未定义操作')) throw '未定义操作';
   else if (res.data.includes('恭喜你签到成功')) return '签到成功';
   else throw '未知错误';
 };
