@@ -4,7 +4,7 @@
 // @version           1.0.0
 // @author            joxon
 // @loginURL          http://www.pt80.net/member.php?mod=logging&action=login
-// @updateURL
+// @updateURL         https://raw.githubusercontent.com/Joxon/hello-js/master/scripts-signin/sign-pt80.js
 // @expire            900e3
 // @domain            www.pt80.net
 // ==/UserScript==
@@ -28,13 +28,16 @@ exports.run = async function() {
     }
   );
   console.log(res);
-  if (res.data.includes('您当前的访问请求当中含有非法字符')) throw '请求格式错误';
+  if (res.data.includes('您当前的访问请求当中含有非法字符'))
+    throw '请求格式错误';
   else if (res.data.includes('恭喜你签到成功')) return '签到成功';
   else throw '未知错误';
 };
 
 exports.check = async function() {
-  var res = await axios.get('http://www.pt80.net/plugin.php?id=dsu_paulsign:sign');
+  var res = await axios.get(
+    'http://www.pt80.net/plugin.php?id=dsu_paulsign:sign'
+  );
   if (res.data.includes('您需要先登录才能继续本操作')) return false;
   else return true;
 };

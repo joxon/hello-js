@@ -4,7 +4,7 @@
 // @version           1.0.0
 // @author            joxon
 // @loginURL          https://www.chrono.gg/
-// @updateURL
+// @updateURL         https://raw.githubusercontent.com/Joxon/hello-js/master/scripts-signin/sign-chronogg.js
 // @expire            900e3
 // @domain            api.chrono.gg
 // ==/UserScript==

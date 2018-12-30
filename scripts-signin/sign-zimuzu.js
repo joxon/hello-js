@@ -4,7 +4,7 @@
 // @version           1.0.0
 // @author            joxon
 // @loginURL          http://www.zimuzu.tv/user/login
-// @updateURL
+// @updateURL         https://raw.githubusercontent.com/Joxon/hello-js/master/scripts-signin/sign-zimuzu.js
 // @expire            900e3
 // @domain            www.zimuzu.tv
 // ==/UserScript==

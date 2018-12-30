@@ -4,7 +4,7 @@
 // @version           1.0.0
 // @author            joxon
 // @loginURL          http://www.mafengwo.cn/
-// @updateURL
+// @updateURL         https://raw.githubusercontent.com/Joxon/hello-js/master/scripts-signin/sign-mafengwo.js
 // @expire            900e3
 // @domain            www.mafengwo.cn/
 // ==/UserScript==

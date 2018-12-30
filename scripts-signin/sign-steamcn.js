@@ -4,7 +4,7 @@
 // @version           1.0.0
 // @author            joxon
 // @loginURL          https://steamcn.com/member.php?mod=logging&action=login
-// @updateURL
+// @updateURL         https://raw.githubusercontent.com/Joxon/hello-js/master/scripts-signin/sign-steamcn.js
 // @expire            900e3
 // @domain            steamcn.com
 // ==/UserScript==

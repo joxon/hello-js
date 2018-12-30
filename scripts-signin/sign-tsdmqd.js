@@ -4,12 +4,12 @@
 // @version           1.0.0
 // @author            joxon
 // @loginURL          http://www.tsdm.me/forum.php
-// @updateURL
+// @updateURL         https://raw.githubusercontent.com/Joxon/hello-js/master/scripts-signin/sign-tsdmqd.js
 // @expire            900e3
 // @domain            www.tsdm.me
 // ==/UserScript==
 
-exports.run = async function () {
+exports.run = async function() {
   var res = await axios.post(
     'http://www.tsdm.me/plugin.php?id=dsu_paulsign:sign&operation=qiandao&infloat=1&sign_as=1&inajax=1',
     {
@@ -30,14 +30,22 @@ exports.run = async function () {
     }
   );
   console.log(res);
-  if (res.data.includes('您当前的访问请求当中含有非法字符')) throw '请求格式错误';
-  else if (res.data.includes('未定义操作')) throw '未定义操作';
-  else if (res.data.includes('恭喜你签到成功')) return '签到成功';
-  else throw '未知错误';
+  if (res.data.includes('您当前的访问请求当中含有非法字符')) {
+    throw '请求格式错误';
+  } else if (res.data.includes('恭喜你签到成功')) {
+    return '签到成功';
+  } else {
+    throw '未知错误';
+  }
 };
 
-exports.check = async function () {
-  var res = await axios.get('http://www.tsdm.me/plugin.php?id=np_cliworkdz:work');
-  if (res.data.includes('请先登录再进行点击任务')) return false;
-  else return true;
+exports.check = async function() {
+  var res = await axios.get(
+    'http://www.tsdm.me/plugin.php?id=np_cliworkdz:work'
+  );
+  if (res.data.includes('请先登录再进行点击任务')) {
+    return false;
+  } else {
+    return true;
+  }
 };
