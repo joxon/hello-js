@@ -4,7 +4,7 @@
 // @version           1.0.0
 // @author            joxon
 // @loginURL          https://ourbits.club/login.php
-// @updateURL
+// @updateURL         https://raw.githubusercontent.com/Joxon/hello-js/master/scripts-signin/sign-ourbits.js
 // @expire            900e3
 // @domain            ourbits.club
 // ==/UserScript==
@@ -21,7 +21,7 @@ exports.run = async function() {
 };
 
 exports.check = async function() {
-  var res = await axios.get('https:///ourbits.club/index.php');
+  var res = await axios.get('https://ourbits.club/index.php');
   //未登录会返回302，重定向到login.php
   return res.status === 200;
 };

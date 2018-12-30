@@ -4,7 +4,7 @@
 // @version           1.0.0
 // @author            joxon
 // @loginURL          https://steamcn.com/member.php?mod=logging&action=login
-// @updateURL
+// @updateURL         https://raw.githubusercontent.com/Joxon/hello-js/master/scripts-signin/sign-pdawiki.js
 // @expire            900e3
 // @domain            www.pdawiki.com
 // ==/UserScript==
@@ -17,5 +17,7 @@ exports.run = async function() {
 };
 
 exports.check = async function() {
-  var res = await axios.get('https://www.pdawiki.com/forum/dsu_paulsign-sign.html');
+  var res = await axios.get(
+    'https://www.pdawiki.com/forum/dsu_paulsign-sign.html'
+  );
 };
