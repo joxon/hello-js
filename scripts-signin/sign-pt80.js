@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name              PT80
-// @namespace         https://github.com/joxon
+// @namespace         https://github.com/joxon/hello-js
 // @version           1.0.0
 // @author            joxon
 // @loginURL          http://www.pt80.net/member.php?mod=logging&action=login

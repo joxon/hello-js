@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name              蚂蜂窝
-// @namespace         https://github.com/joxon
+// @namespace         https://github.com/joxon/hello-js
 // @version           1.0.0
 // @author            joxon
 // @loginURL          http://www.mafengwo.cn/

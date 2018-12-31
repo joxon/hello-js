@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name              HDChina
-// @namespace         https://github.com/joxon
+// @namespace         https://github.com/joxon/hello-js
 // @version           1.0.0
 // @author            joxon
 // @loginURL          https://hdchina.org/login.php

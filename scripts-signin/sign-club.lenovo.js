@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name              联想社区
-// @namespace         https://github.com/joxon
+// @namespace         https://github.com/joxon/hello-js
 // @version           1.0.0
 // @author            joxon
 // @loginURL          https://club.lenovo.com.cn/signlist

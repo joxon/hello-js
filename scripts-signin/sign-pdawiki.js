@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name              SteamCN
-// @namespace         https://github.com/joxon
+// @namespace         https://github.com/joxon/hello-js
 // @version           1.0.0
 // @author            joxon
 // @loginURL          https://steamcn.com/member.php?mod=logging&action=login
