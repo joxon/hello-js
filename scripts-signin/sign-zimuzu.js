@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name              字幕组
-// @namespace         https://github.com/joxon
+// @namespace         https://github.com/joxon/hello-js
 // @version           1.0.0
 // @author            joxon
 // @loginURL          http://www.zimuzu.tv/user/login

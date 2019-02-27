@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name              Chrono.gg
-// @namespace         https://github.com/joxon
+// @namespace         https://github.com/Joxon/hello-js
 // @version           1.0.0
 // @author            joxon
 // @loginURL          https://www.chrono.gg/
@@ -9,7 +9,7 @@
 // @domain            api.chrono.gg
 // ==/UserScript==
 
-exports.run = async function () {
+exports.run = async function() {
   await axios.options('https://api.chrono.gg/quest/spin');
   let res = await axios.get('https://api.chrono.gg/quest/spin');
   // res.data { "quest": { "_id": -1, "name": "default", "earns": "coins", "kind": "daily", "value": 20, "bonus": 3 }, "chest": { } }
@@ -17,4 +17,4 @@ exports.run = async function () {
   else throw '未知错误';
 };
 
-exports.check = async function () { };
+exports.check = async function() {};

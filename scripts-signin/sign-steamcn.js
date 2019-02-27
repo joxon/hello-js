@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name              SteamCN
-// @namespace         https://github.com/joxon
+// @namespace         https://github.com/joxon/hello-js
 // @version           1.0.0
 // @author            joxon
 // @loginURL          https://steamcn.com/member.php?mod=logging&action=login
@@ -15,4 +15,11 @@ exports.run = async function() {
   else throw '未知错误';
 };
 
-exports.check = async function() {};
+exports.check = async function() {
+  let res = await axios.get('https://steamcn.com/home.php?mod=spacecp');
+  if (res.data.includes('提示信息')) {
+    return false;
+  } else {
+    return true;
+  }
+};
