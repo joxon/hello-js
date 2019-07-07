@@ -2,7 +2,7 @@
 
 Welcome to my JS repo!
 
-Here you may find some JS scripts that I wrote.
+Here you may find some JS scripts that I wrote or collected from other places.
 
 ## Intro
 
