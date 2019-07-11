@@ -18,9 +18,12 @@ var reorderList = function(head) {
   let arrayReversed = []
   let node = head
   while (node !== null) {
-    arrayReversed.unshift(node.val)
+    // unshift() is slower? 160ms
+    arrayReversed.push(node.val)
     node = node.next
   }
+  // reverse(): 84ms
+  arrayReversed.reverse()
 
   // insert
   const len = arrayReversed.length
