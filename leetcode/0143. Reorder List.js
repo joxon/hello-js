@@ -18,10 +18,9 @@ var reorderList = function(head) {
   let arrayReversed = []
   let node = head
   while (node !== null) {
-    arrayReversed.push(node.val)
+    arrayReversed.unshift(node.val)
     node = node.next
   }
-  arrayReversed.reverse()
 
   // insert
   const len = arrayReversed.length
