@@ -17,20 +17,23 @@
  */
 
 var deleteNode = function(node) {
-  node.val = node.next.val
-  node.next = node.next.next
+  let n = node
+  while (n.next.next !== null) {
+    n.val = n.next.val
+    n = n.next
+  }
+  n.val = n.next.val
+  n.next = null
 }
 
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
+const ListNode = require('../ListNode.js')
+const printListNode = require('../printListNode.js')
 
 let head = new ListNode(1)
 head.next = new ListNode(2)
 head.next.next = new ListNode(3)
 head.next.next.next = new ListNode(4)
 
-console.log(head)
+printListNode(head)
 deleteNode(head.next)
-console.log(head)
+printListNode(head)

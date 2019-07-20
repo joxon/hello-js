@@ -51,22 +51,8 @@ var isPalindrome = function(head) {
   return true
 }
 
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
-
-function printListNode(head) {
-  let node = head
-  let s = ''
-  while (node !== null) {
-    s += node.val + '->'
-    console.log(s)
-    node = node.next
-  }
-  s += 'null'
-  console.log(s)
-}
+const ListNode = require('../ListNode.js')
+const printListNode = require('../printListNode.js')
 
 let head = new ListNode(1)
 head.next = new ListNode(2)

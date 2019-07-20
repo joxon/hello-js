@@ -28,10 +28,8 @@ var removeElements = function(head, val) {
   return head
 }
 
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
+const ListNode = require('../ListNode.js')
+const printListNode = require('../printListNode.js')
 
 let head = new ListNode(2)
 head.next = new ListNode(1)
@@ -39,6 +37,6 @@ head.next.next = new ListNode(2)
 head.next.next.next = new ListNode(2)
 head.next.next.next.next = new ListNode(2)
 
-console.log(head)
+printListNode(head)
 head = removeElements(head, 2)
-console.log(head)
+printListNode(head)

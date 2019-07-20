@@ -28,14 +28,12 @@ var removeNthFromEnd = function(head, n) {
   return head
 }
 
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
+const ListNode = require('../ListNode.js')
+const printListNode = require('../printListNode.js')
 
 let head = new ListNode(1)
 head.next = new ListNode(2)
 head.next.next = new ListNode(3)
 head.next.next.next = new ListNode(4)
 
-console.log(removeNthFromEnd(head, 4))
+printListNode(removeNthFromEnd(head, 4))

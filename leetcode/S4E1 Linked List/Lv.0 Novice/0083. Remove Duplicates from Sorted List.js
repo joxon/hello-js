@@ -23,10 +23,8 @@ var deleteDuplicates = function(head) {
   return head
 }
 
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
+const ListNode = require('../ListNode.js')
+const printListNode = require('../printListNode.js')
 
 let head = new ListNode(1)
 head.next = new ListNode(1)
@@ -44,5 +42,5 @@ head2.next.next = new ListNode(1)
 //   node = node.next
 // }
 
-console.log(deleteDuplicates(head))
-console.log(deleteDuplicates(head2))
+printListNode(deleteDuplicates(head))
+printListNode(deleteDuplicates(head2))

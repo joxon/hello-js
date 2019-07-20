@@ -36,10 +36,8 @@ var swapPairs = function(head) {
   return newHead
 }
 
-function ListNode(val) {
-  this.val = val
-  this.next = null
-}
+const ListNode = require('../ListNode.js')
+const printListNode = require('../printListNode.js')
 
 let head = new ListNode(1)
 head.next = new ListNode(2)
@@ -47,18 +45,6 @@ head.next.next = new ListNode(3)
 head.next.next.next = new ListNode(4)
 head.next.next.next.next = new ListNode(5)
 head.next.next.next.next.next = new ListNode(6)
-
-function printListNode(head) {
-  let node = head
-  let s = ''
-  while (node !== null) {
-    s += node.val + '->'
-    console.log(s)
-    node = node.next
-  }
-  s += 'null'
-  console.log(s)
-}
 
 printListNode(head)
 printListNode(swapPairs(head))
