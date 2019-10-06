@@ -2,9 +2,10 @@ if (!requestScreenCapture()) {
   toastLog('requestScreenCapture() failed!')
   exit()
 }
-let handImage = images.read('/sdcard/_Android/_AutoJS/forest-hand.png')
+let handImage = images.read('/sdcard/_Android/_AutoJS/forest-hand-50x50.png')
+toastLog(handImage)
 let handPoint = findImage(captureScreen(), handImage, {
-  threshold: 0.5
+  threshold: 1.0
 })
 toastLog(handPoint)
-click(handPoint.x, handPoint.y + 10)
+if (handPoint) click(handPoint.x, handPoint.y + 10)

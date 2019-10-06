@@ -4,8 +4,10 @@
  * @return {number[]}
  */
 var twoSum = function(nums, target) {
-  let m = new Map()
+  const m = new Map()
+  // first pass, bad
   nums.forEach((num, index) => m.set(num, index))
+  // second pass
   const len = nums.length
   for (let index = 0; index < len; ++index) {
     let anotherNum = target - nums[index]
