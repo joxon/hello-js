@@ -45,9 +45,31 @@ function draw() {
   image(video, 0, 0);
 
   // eye balls should be bound to eye frames
-  const eyeBallLeftX = noseX - 50;
-  const eyeBallRightX = noseX + 50;
-  const eyeBallY = noseY - 100;
+  // https://p5js.org/reference/#/p5/map
+  const eyeBallLeftX = map(
+    noseX,
+    0,
+    CANVAS_WIDTH,
+    EYE_FRAME_LEFT_X - EYE_FRAME_RADIUS_X,
+    EYE_FRAME_LEFT_X + EYE_FRAME_RADIUS_X,
+    true
+  );
+  const eyeBallRightX = map(
+    noseX,
+    0,
+    CANVAS_WIDTH,
+    EYE_FRAME_RIGHT_X - EYE_FRAME_RADIUS_X,
+    EYE_FRAME_RIGHT_X + EYE_FRAME_RADIUS_X,
+    true
+  );
+  const eyeBallY = map(
+    noseY,
+    0,
+    CANVAS_HEIGHT,
+    EYE_FRAME_Y - EYE_FRAME_RADIUS_Y,
+    EYE_FRAME_Y + EYE_FRAME_RADIUS_Y,
+    true
+  );
 
   // left eye frame
   fill(WHITE);
