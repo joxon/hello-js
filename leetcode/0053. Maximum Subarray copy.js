@@ -9,13 +9,14 @@
  */
 var maxSubArray = function(nums) {
   const len = nums.length;
-  let localBest = (globalBest = nums[0]);
+  let best = nums[0];
   for (let i = 1; i < len; ++i) {
-    // ! How to be greedy: every time you want more
-    localBest = Math.max(nums[i], nums[i] + localBest);
-    globalBest = Math.max(localBest, globalBest);
+    // if the previous number is good then we will take it
+    if (nums[i - 1] > 0) {
+      nums[i] += nums[i - 1];
+    }
+    // else we will just begin with a new number
+    best = Math.max(nums[i], best);
   }
-  return globalBest;
+  return best;
 };
-
-console.log(maxSubArray([-2, 1, -3, 4, -1, 2, 1, -5, 4])); // 6
