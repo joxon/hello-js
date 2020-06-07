@@ -1,85 +1,174 @@
-;(function fun() {
-  console.log('===fun starts===')
+(function () {
+  console.log("===function () fun starts===");
 
   function funcThis1() {
-    console.log(this)
+    console.assert(this === globalThis);
   }
+  funcThis1();
 
-  const funcThis2 = function() {
-    console.log(this)
-  }
+  const funcThis2 = function () {
+    console.assert(this === globalThis);
+  };
+  funcThis2();
 
   const funcThis3 = function logThis3() {
-    console.log(this)
-  }
+    console.assert(this === globalThis);
+  };
+  funcThis3();
+
+  (function funcThis4() {
+    console.assert(this === globalThis);
+  })();
 
   const arrowThis1 = () => {
-    console.log(this)
-  }
+    console.assert(this === globalThis);
+  };
+  arrowThis1();
 
-  funcThis1()
-  funcThis2()
-  funcThis3()
-  ;(function funcThis4() {
-    console.log(this)
-  })()
+  (() => {
+    console.assert(this === globalThis);
+  })();
 
-  arrowThis1()
-  ;(() => {
-    console.log(this)
-  })()
-
-  console.log('===fun ends===')
-})()
-;(function() {
-  console.log('===obj starts===')
+  console.log("===function () fun ends===");
+})();
+(function () {
+  console.log("===function () obj starts===");
 
   const obj = {
     thisInPropertyNamedFunction: function f() {
-      console.log(this)
+      console.assert(this !== globalThis);
     },
-    thisInPropertyAnonymousFunction: function() {
-      console.log(this)
+    thisInPropertyAnonymousFunction: function () {
+      console.assert(this !== globalThis);
     },
     thisInMethodFunction() {
-      console.log(this)
+      console.assert(this !== globalThis);
     },
     thisInArrowFunction: () => {
-      console.log(this)
-    }
-  }
-  obj.thisInPropertyNamedFunction() // obj
-  obj.thisInPropertyAnonymousFunction() // obj
-  obj.thisInMethodFunction() // obj
-  obj.thisInArrowFunction() // window
+      console.assert(this === globalThis);
+    },
+  };
+  obj.thisInPropertyNamedFunction(); // obj
+  obj.thisInPropertyAnonymousFunction(); // obj
+  obj.thisInMethodFunction(); // obj
+  obj.thisInArrowFunction(); // window
 
-  console.log('===obj ends===')
-})()
-;(function() {
-  console.log('===class starts===')
+  console.log("===function () obj ends===");
+})();
+(function () {
+  console.log("===function () class starts===");
 
   class Person {
     constructor() {
       this.thisInPropertyNamedFunction = function f() {
-        console.log(this)
-      }
-      this.thisInPropertyAnonymousFunction = function() {
-        console.log(this)
-      }
+        console.assert(this !== globalThis);
+      };
+      this.thisInPropertyAnonymousFunction = function () {
+        console.assert(this !== globalThis);
+      };
       this.thisInArrowFunction = () => {
-        console.log(this)
-      }
+        console.assert(this !== globalThis);
+      };
     }
     thisInMethodFunction() {
-      console.log(this)
+      console.assert(this !== globalThis);
     }
   }
 
-  const somebody = new Person()
-  somebody.thisInPropertyNamedFunction() // somebody
-  somebody.thisInPropertyAnonymousFunction() // somebody
-  somebody.thisInMethodFunction() // somebody
-  somebody.thisInArrowFunction() // somebody
+  const somebody = new Person();
+  somebody.thisInPropertyNamedFunction(); // somebody
+  somebody.thisInPropertyAnonymousFunction(); // somebody
+  somebody.thisInMethodFunction(); // somebody
+  somebody.thisInArrowFunction(); // somebody
 
-  console.log('===class ends===')
-})()
+  console.log("===function () class ends===");
+})();
+(() => {
+  console.log("===() => fun starts===");
+
+  function funcThis1() {
+    console.assert(this === globalThis);
+  }
+  funcThis1();
+
+  const funcThis2 = function () {
+    console.assert(this === globalThis);
+  };
+  funcThis2();
+
+  const funcThis3 = function logThis3() {
+    console.assert(this === globalThis);
+  };
+  funcThis3();
+
+  (function funcThis4() {
+    console.assert(this === globalThis);
+  })();
+
+  const arrowThis1 = () => {
+    console.assert(this !== globalThis); // {}
+    console.assert(this.console === undefined); // {}
+  };
+  arrowThis1();
+
+  (() => {
+    console.assert(this !== globalThis);
+  })();
+
+  console.log("===() => fun ends===");
+})();
+(() => {
+  console.log("===() => obj starts===");
+
+  const obj = {
+    thisInPropertyNamedFunction: function f() {
+      console.assert(this !== globalThis);
+      console.assert(this === obj);
+    },
+    thisInPropertyAnonymousFunction: function () {
+      console.assert(this !== globalThis);
+      console.assert(this === obj);
+    },
+    thisInMethodFunction() {
+      console.assert(this !== globalThis);
+      console.assert(this === obj);
+    },
+    thisInArrowFunction: () => {
+      console.assert(this !== globalThis); // {}
+    },
+  };
+  obj.thisInPropertyNamedFunction(); // obj
+  obj.thisInPropertyAnonymousFunction(); // obj
+  obj.thisInMethodFunction(); // obj
+  obj.thisInArrowFunction(); // {}
+
+  console.log("===() => obj ends===");
+})();
+(() => {
+  console.log("===() => class starts===");
+
+  class Person {
+    constructor() {
+      this.thisInPropertyNamedFunction = function f() {
+        console.assert(this !== globalThis);
+      };
+      this.thisInPropertyAnonymousFunction = function () {
+        console.assert(this !== globalThis);
+      };
+      this.thisInArrowFunction = () => {
+        console.assert(this !== globalThis);
+      };
+    }
+    thisInMethodFunction() {
+      console.assert(this !== globalThis);
+    }
+  }
+
+  const somebody = new Person();
+  somebody.thisInPropertyNamedFunction(); // somebody
+  somebody.thisInPropertyAnonymousFunction(); // somebody
+  somebody.thisInMethodFunction(); // somebody
+  somebody.thisInArrowFunction(); // somebody
+
+  console.log("===() => class ends===");
+})();
