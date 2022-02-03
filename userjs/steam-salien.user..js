@@ -3,7 +3,7 @@
 // @description     _(:3」∠)_
 // @author          MapleRecall
 // @namespace       https://coding.net/u/maplerecall
-// @downloadURL     https://coding.net/u/maplerecall/p/steam-2018-summer-game-hack/git/raw/master/index.user.js
+// @downloadURL   https://coding.net/u/maplerecall/p/steam-2018-summer-game-hack/git/raw/master/index.user.js
 //
 // @license         MIT License
 // @copyright       Copyright (C) 2018, by MapleRecall

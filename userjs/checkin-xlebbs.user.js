@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name         checkin-xlebbs
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
-// @updateURL    https://raw.githubusercontent.com/joxon/hello-js/master/userjs/checkin-xlebbs.js
+// @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-xlebbs.user.js
+// @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-xlebbs.user.js
 // @version      1.0.0
 // @author       joxon
 // @match        https://www.xlebbs.com/

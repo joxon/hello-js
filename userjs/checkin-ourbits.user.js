@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name         checkin-ourbits
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
-// @updateURL    https://raw.githubusercontent.com/joxon/hello-js/master/userjs/checkin-ourbits.js
+// @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-ourbits.user.js
+// @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-ourbits.user.js
 // @version      1.0.0
 // @author       joxon
 // @match        https://ourbits.club/*

@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name         checkin-opencd
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
-// @updateURL    https://raw.githubusercontent.com/joxon/hello-js/master/userjs/checkin-opencd.js
+// @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-opencd.user.js
+// @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-opencd.user.js
 // @version      1.0.0
 // @author       joxon
 // @match        https://open.cd/*

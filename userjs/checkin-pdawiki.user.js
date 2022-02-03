@@ -1,7 +1,8 @@
 // ==UserScript==
 // @name         checkin-padwiki
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
-// @updateURL    https://raw.githubusercontent.com/joxon/hello-js/master/userjs/checkin-padwiki.js
+// @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-padwiki.user.js
+// @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-padwiki.user.js
 // @version      1.0.0
 // @author       joxon
 // @match        https://www.pdawiki.com/forum/plugin.php?id=dsu_paulsign:sign
