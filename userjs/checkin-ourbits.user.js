@@ -16,9 +16,9 @@
   const checkinAnchor = document.querySelector("#info_block > tbody > tr > td > table > tbody > tr > td:nth-child(1) > span > a.faqlink")
   if (checkinAnchor?.innerHTML === '签到得魔力') {
     checkinAnchor.click()
-    console.log('done');
+    alert('done');
   } else {
-    console.log('already checked in..');
+    alert('already checked in..');
   }
 
 })()

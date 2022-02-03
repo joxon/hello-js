@@ -15,9 +15,9 @@
 
   const checkinAnchor = document.querySelector('#signed')
   if (checkinAnchor?.innerHTML.includes('已签到')) {
-    console.log('already checked in..')
+    alert('already checked in..')
   } else {
     checkinAnchor.click()
-    console.log('done')
+    alert('done')
   }
 })()

@@ -17,7 +17,7 @@
     document.querySelector('#ct > div > h1')?.innerText ===
     '您今天已经签到过了或者签到时间还未开始'
   ) {
-    console.log('already checked in. skipping..')
+    alert('already checked in. skipping..')
     return
   }
 
@@ -25,7 +25,7 @@
     '#qiandao > input[type=hidden]'
   )?.value
   if (typeof formHash !== 'string') {
-    console.log('formHash does not exist. failing..')
+    alert('formHash does not exist. failing..')
     return
   }
 

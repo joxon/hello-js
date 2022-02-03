@@ -20,7 +20,7 @@
     checkinAnchor?.innerHTML.includes('已签到') ||
     checkinAnchor?.innerHTML.includes('查看签到记录')
   ) {
-    console.log('already checked in..')
+    alert('already checked in..')
   } else {
     checkinAnchor.click()
   }

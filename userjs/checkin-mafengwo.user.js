@@ -15,5 +15,3 @@
 
   document.querySelector('#head-btn-daka')?.click()
 })()
-
-document.querySelector("#info_block > tbody > tr > td > table > tbody > tr > td:nth-child(1) > span > a.faqlink")

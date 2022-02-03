@@ -17,9 +17,8 @@
     '#info_block > tbody > tr > td > table > tbody > tr > td:nth-child(3) > div:nth-child(2) > a:nth-child(1)'
   )
   if (checkinAnchor?.innerHTML.includes('已签到') || checkinAnchor?.innerHTML.includes('查看签到记录')) {
-    console.log('already checked in..')
+    alert('already checked in..')
   } else {
     checkinAnchor.click()
   }
 })()
-document.querySelector("#site_header > font > div.userinfort > p > a:nth-child(2)")
