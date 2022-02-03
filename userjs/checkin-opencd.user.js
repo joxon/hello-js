@@ -5,7 +5,7 @@
 // @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-opencd.user.js
 // @version      1.0.0
 // @author       joxon
-// @match        https://open.cd/*
+// @match        https://open.cd/index.php
 // @icon         https://open.cd/favicon.ico
 // @grant        none
 // @run-at       document-idle
