@@ -3,7 +3,7 @@
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
 // @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-hdchina.user.js
 // @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-hdchina.user.js
-// @version      1.0.0
+// @version      1.0.1
 // @author       joxon
 // @match        https://hdchina.org/*
 // @icon         https://hdchina.org/favicon.ico
