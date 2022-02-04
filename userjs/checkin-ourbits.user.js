@@ -3,7 +3,7 @@
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
 // @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-ourbits.user.js
 // @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-ourbits.user.js
-// @version      1.0.0
+// @version      1.0.1
 // @author       joxon
 // @match        https://ourbits.club/*
 // @icon         https://ourbits.club/favicon.ico
@@ -14,12 +14,13 @@
 ;(function () {
   'use strict'
 
-  const checkinAnchor = document.querySelector("#info_block > tbody > tr > td > table > tbody > tr > td:nth-child(1) > span > a.faqlink")
+  const checkinAnchor = document.querySelector(
+    '#info_block > tbody > tr > td > table > tbody > tr > td:nth-child(1) > span > a.faqlink'
+  )
   if (checkinAnchor?.innerHTML === '签到得魔力') {
     checkinAnchor.click()
-    alert('done');
+    alert('done')
   } else {
-    alert('already checked in..');
+    console.log('already checked in..')
   }
-
 })()
