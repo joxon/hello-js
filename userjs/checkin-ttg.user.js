@@ -3,7 +3,7 @@
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
 // @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-ttg.user.js
 // @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-ttg.user.js
-// @version      1.0.0
+// @version      1.0.1
 // @author       joxon
 // @match        https://totheglory.im/*
 // @icon         https://totheglory.im/favicon.ico
@@ -13,12 +13,10 @@
 
 ;(function () {
   'use strict'
-
-  const checkinAnchor = document.querySelector('#signed')
-  if (checkinAnchor?.innerHTML.includes('已签到')) {
-    alert('already checked in..')
+  if (document.querySelector('#sp_signed')?.innerHTML.includes('已签到')) {
+    console.log('already checked in..')
   } else {
-    checkinAnchor.click()
-    alert('done')
+    document.querySelector('#signed')?.click()
+    console.log('done')
   }
 })()
