@@ -53,5 +53,7 @@
         alert('checkin failed')
       }
     })
+  } else {
+    console.log('already checked in..');
   }
 })()
