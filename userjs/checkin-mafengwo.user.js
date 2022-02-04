@@ -3,7 +3,7 @@
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
 // @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-mafengwo.user.js
 // @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-mafengwo.user.js
-// @version      1.0.0
+// @version      1.0.1
 // @author       joxon
 // @match        https://www.mafengwo.cn/
 // @icon         https://www.mafengwo.cn/favicon.ico
@@ -14,5 +14,13 @@
 ;(function () {
   'use strict'
 
-  document.querySelector('#head-btn-daka')?.click()
+  const checkinAnchor = document.querySelector('#head-btn-daka')
+  if (checkinAnchor?.classList.value.includes('btn-active')) {
+    console.log('found checkin anchor');
+    checkinAnchor.click()
+    console.log('clicked checkin anchor');
+    alert('clicked checkin anchor')
+  } else {
+    console.log('checkin anchor not active or already checked in..');
+  }
 })()
