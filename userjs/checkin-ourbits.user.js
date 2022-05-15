@@ -19,7 +19,6 @@
   )
   if (checkinAnchor?.innerHTML === '签到得魔力') {
     checkinAnchor.click()
-    alert('done')
   } else {
     console.log('already checked in..')
   }

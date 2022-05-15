@@ -18,7 +18,7 @@
     document.querySelector('#ct > div > h1')?.innerText ===
     '您今天已经签到过了或者签到时间还未开始'
   ) {
-    alert('already checked in. skipping..')
+    console.log('already checked in. skipping..')
     return
   }
 
@@ -26,7 +26,7 @@
     '#qiandao > input[type=hidden]'
   )?.value
   if (typeof formHash !== 'string') {
-    alert('formHash does not exist. failing..')
+    console.log('formHash does not exist. failing..')
     return
   }
 
@@ -64,10 +64,10 @@
     }
   ).then((response) => {
     if (response.ok) {
-      alert('checkin done')
+      console.log('checkin done')
       location.reload()
     } else {
-      alert('checkin failed')
+      console.log('checkin failed')
     }
   })
 })()

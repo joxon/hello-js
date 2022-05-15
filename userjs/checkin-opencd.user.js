@@ -18,7 +18,7 @@
     '#info_block > tbody > tr > td > table > tbody > tr > td:nth-child(3) > div:nth-child(2) > a:nth-child(1)'
   )
   if (checkinAnchor?.innerHTML.includes('已签到') || checkinAnchor?.innerHTML.includes('查看签到记录')) {
-    alert('already checked in..')
+    console.log('already checked in..')
   } else {
     checkinAnchor.click()
   }

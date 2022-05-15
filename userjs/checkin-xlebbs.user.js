@@ -47,10 +47,10 @@
       }
     ).then((response) => {
       if (response.ok) {
-        alert('checkin done')
+        console.log('checkin done')
         location.reload()
       } else {
-        alert('checkin failed')
+        console.log('checkin failed')
       }
     })
   } else {

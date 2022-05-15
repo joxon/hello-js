@@ -19,7 +19,6 @@
     console.log('found checkin anchor');
     checkinAnchor.click()
     console.log('clicked checkin anchor');
-    alert('clicked checkin anchor')
   } else {
     console.log('checkin anchor not active or already checked in..');
   }
