@@ -3,7 +3,7 @@
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
 // @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-opencd.user.js
 // @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-opencd.user.js
-// @version      1.0.0
+// @version      20220515
 // @author       joxon
 // @match        https://open.cd/index.php
 // @icon         https://open.cd/favicon.ico

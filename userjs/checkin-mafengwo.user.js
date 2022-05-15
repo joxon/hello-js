@@ -3,7 +3,7 @@
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
 // @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-mafengwo.user.js
 // @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-mafengwo.user.js
-// @version      1.0.1
+// @version      20220515
 // @author       joxon
 // @match        https://www.mafengwo.cn/
 // @icon         https://www.mafengwo.cn/favicon.ico

@@ -3,7 +3,7 @@
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
 // @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-xlebbs.user.js
 // @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-xlebbs.user.js
-// @version      1.0.2
+// @version      20220515
 // @author       joxon
 // @match        https://www.xlebbs.com/
 // @icon         https://www.xlebbs.com/favicon.ico

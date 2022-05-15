@@ -3,7 +3,7 @@
 // @namespace    https://github.com/joxon/hello-js/tree/master/userjs
 // @updateURL    https://github.com/joxon/hello-js/raw/master/userjs/checkin-ttg.user.js
 // @downloadURL  https://github.com/joxon/hello-js/raw/master/userjs/checkin-ttg.user.js
-// @version      1.0.1
+// @version      20220515
 // @author       joxon
 // @match        https://totheglory.im/*
 // @icon         https://totheglory.im/favicon.ico
